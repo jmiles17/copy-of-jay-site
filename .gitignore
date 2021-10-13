@@ -9,8 +9,4 @@
 # production
 /build
 
-# other
-/target
-dotenv.js
-reup.py
 
