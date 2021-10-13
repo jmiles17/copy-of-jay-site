@@ -1,0 +1,481 @@
+/* 
+style.css 
+Jason Miles
+
+organization:
+  - elements
+  - navbar
+  - animation
+  - section classes
+  - section specific classes
+    - site message
+    - footer
+    - download button
+    - contact form
+    - experience headers
+    - interests
+  - section specific ids
+*/
+
+/***** elements *****/
+body {
+  text-align: center;
+  background-image: linear-gradient(to bottom right, #1a1a1a, #666666);
+  position: relative;
+}
+
+div {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  text-align: center;
+  font-size: large;
+}
+
+a {
+  color: lightgreen;
+}
+
+iframe {
+  /* width: 14vw; */
+  height: 20vh;
+}
+
+img {
+  border-radius: 1vh;
+}
+
+
+/**** navbar ****/
+nav {
+  border-bottom-left-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+}
+
+nav a {
+  color: white;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  font-size: large;
+  font-weight: 400;
+}
+
+a:hover {
+  color: #8c83c9;
+  text-decoration: none;
+}
+
+.navbar-nav a.nav-link.custom-link {
+  color: white;
+}
+
+.navbar-nav a.nav-link.custom-link.active {
+  color: lightgreen;
+}
+
+.navbar-nav a.nav-link.custom-link:hover {
+  color: lightgreen;
+}
+
+
+/***** animation *****/
+.anim_element {
+  opacity: 0;
+  
+}
+
+.anim_header {
+  opacity: 0;
+  animation-duration: .7s;
+}
+
+/* all content besides section headers */
+.in_up {
+  opacity: 1;
+  animation: fadeInUp;
+  animation-duration: .6s;
+}
+
+/* used for section headers */
+.in_left {
+  opacity: 1;
+  animation: fadeInLeft;
+  animation-duration: .7s;
+}
+
+.in_right {
+  opacity: 1;
+  animation: fadeInRight;
+  animation-duration: .7s;
+}
+
+
+/***** section classes *****/
+/* continuous classes across the different sections */
+
+/**** general ****/
+.site-section {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+
+  min-height: 60vh;
+  
+  position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  .site-section {
+    margin-right: 5vw;
+    margin-left: 5vw;
+  }
+}
+
+.section-header {
+  color: white;
+  background-image: linear-gradient(to right, #7c71c1, darkslateblue);
+  
+  /* margin-top: 5vh; */
+  margin-bottom: 4vh;
+  margin-right: 2vw;
+  margin-left: 2vw;
+
+  padding: 2.5vh;
+  border-radius: 2vw;
+}
+
+.section-elements { 
+  margin-right: 1vw;
+  margin-left: 1vw;
+}
+
+.section-element {
+  margin-right: .25vw;
+  margin-left: .25vw;  
+}
+
+.element-header {
+  /* background-color: #4d4d4d; */
+  /* width: 50%; */
+  border-radius: 1vw;
+  padding: 12px;
+  /* margin-right: 30vw;
+  margin-left: 30vw; */
+}
+
+.element-header h3 {
+  font-style: italic;
+}
+
+.element-content {
+  color: white;
+  font-weight: 500;
+}
+
+
+/***** section specific classes *****/
+
+/*** message ***/
+.site-message {
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+  /* margin-right: 2vw;
+  margin-left: 2vw; */
+  padding-right: 2vw;
+  padding-left: 2vw;
+}
+
+.site-message .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.site-message p {
+  font-size: large;
+}
+
+
+/*** footer ***/
+.footer-section {
+	bottom: 0; /* fix at bottom of page always */
+	height: 18vh;
+	/* background-color: darkslateblue; */
+	color: white; /* font color */
+  background-image: linear-gradient(to right, #7c71c1, darkslateblue);
+}
+
+.footer-icon {
+  color: white;
+  font-size: 2rem;
+  margin-top: 2vh;
+}
+
+.footer-row {
+  height: 40%;
+  align-items: center;
+}
+
+.footer-icon:hover {
+  color: lightgreen;
+}
+
+/*** download resume button ***/
+
+#download-button {
+  background: transparent;
+  border-radius: .2rem;
+  border-width: .2rem;
+  border-color: white;
+  border-style: solid;
+  padding: 1rem;
+}
+
+#download-button a {
+  color: white;
+  /* padding: .5rem; */
+}
+
+#download-button:hover {
+  border-color: lightgreen;
+}
+
+#download-button:hover a {
+  color: lightgreen;
+}
+
+/*** form ***/
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: lightgreen;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #8c83c9;
+}
+
+/* Add a background color and some padding around the form */
+#contact-form {
+  border-radius: 5px;
+  background-color: #666666;
+  padding: 20px;
+  /* height: 50vh; */
+}
+
+
+/*** experience section ***/
+.experience-header {
+  min-height: 25vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-size: cover;
+  background-position: center center;
+  
+  color: white;
+  font-weight: 550;
+
+  border-radius: 1vh;
+}
+
+/*** Project section ***/
+.lights-vid {
+  height: 30vh;
+  width: 70vw;
+}
+
+
+/*** interest section ***/
+
+.podcast-vid {
+  width: 70vw;
+  height: 25vh;
+}
+
+.book {
+  justify-content: center;
+  /* align-items: center;
+  margin-bottom: 2vh; */
+}
+
+@media screen and (min-width: 1200px) {
+  #books .row {
+    margin-right: 4vw;
+    margin-left: 4vw;
+  }  
+}
+
+#books .anim_element {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.book-pic {
+  height: 20vh;
+}
+
+a .book-link {
+  margin: auto;
+  /* width: 80px; */
+}
+
+
+.about-pic {
+  height: 50vh;
+  width: 70vw;
+}
+
+#last-pic {
+  justify-content: center;
+  align-items: center;
+}
+
+#last-pic .about-pic {
+  width: 70vw;
+}
+
+@media screen and (min-width: 768px) {
+  .lights-vid {
+    width: 30vw;
+  }
+  .about-pic {
+    width: 30vw;
+  }
+  #last-pic .about-pic {
+    width: 20vw;
+  }
+}
+
+
+
+/***** section specific ids *****/
+
+/*** whole page ***/
+/* offsets the div margins */
+#page {
+  margin-bottom: -1vh;
+  margin-top: -1vh;
+}
+
+/*** nav ***/
+#site-navbar {
+  padding: 5px;
+}
+
+/*** Home ***/
+
+#Home {
+  height: 100vh;
+}
+
+#home-jumbotron {
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/biking-prof-wide.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  overflow: hidden;
+
+  filter: grayscale(100%);
+
+  height: 100vh;
+  width: 100%;
+
+  margin-top: -10px;
+
+  padding-top: 30vh;
+
+}
+
+#home-header {
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  
+}
+
+#home-header h1 {
+  font-size: 4rem;
+}
+
+
+/*** experience ***/
+
+/* override div center settings */
+#Experience .section-elements {
+  align-items: flex-start;
+}
+
+#research .experience-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../images/bloch-sphere-square.png");
+}
+
+#ta .experience-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../images/elliptic-curve.jpg");
+}
+
+#instructor .experience-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../images/turtle-graphic.png");
+}
+
+#books-description {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#last-pic {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+
+/***** responsive *****/
+@media screen and (min-width: 768px) {
+
+  nav {
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  
+  .site-message {
+    width: 50%;
+  }
+
+  .site-message p {
+    font-size: x-large;
+  }
+
+  .podcast-vid {
+    width: 16vw;
+    height: 20vh;
+  }
+
+}
+
